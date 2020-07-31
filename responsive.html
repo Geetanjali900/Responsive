@@ -1,0 +1,57 @@
+<html>
+<head>
+<marquee><h3> My First Responsive Website</h3></marquee>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">/>
+<link href="styles.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="wrapper">
+  <div id="main_title" >
+  MY WEBSITE
+</div>
+<div id="small_menu" >
+<a href=""   >Home</a> . Gallary . About us . Contact Us .
+</div>
+<div >
+<img class ="mySlides"  src="cs pic3.jpg" width="390px" height="500px" style="width:100%" />
+  <img class="mySlides" src="cspic7.jpg" width="390px" height="500px" style="width:100%">
+  <img class="mySlides" src="cspic8.jpg" width="390px" height="500px" style="width:100%">
+  <img class="mySlides" src="cspic9.jpg" width="390px" height="500px" style="width:100%">
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+
+<div id="big_menu">
+ <div id="menu_button">Home</div>
+<div id="menu_button">Gallary</div>
+<div id="menu_button"> About us</div>
+<div id="menu_button">Contact Us</div> 
+</div>
+<div id="content">
+<div id="info"><div id="info_header">Header one</div>Hey there..!!! I have made a responsive website, website should not be look good on desktop only also it should look good on other devices-mobile,tablets etc.</div>
+<div id="info"><div id="info_header">Header two</div>i have added an additional image when you shrink the page it will show different image and when you expand the page it will show different one.</div>
+<div id="info"><div id="info_header">Header three</div>hope you like this..!!</div>
+</div>
+<div id="info">
+</div>
+<div id="footer" >
+       my website ©2017. All rights reserved
+</div>
+
+</body>
+</html>
